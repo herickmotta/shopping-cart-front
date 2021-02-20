@@ -10,9 +10,7 @@ export default function ProductCard() {
         <h2>Product Name</h2>
         <p>$ 123,00 - 2 left</p>
       </InfoBox>
-      <Button width="100%" height="15%">
-        BUY
-      </Button>
+      <Button width="100%" height="15%" text="BUY" />
     </Card>
   );
 }

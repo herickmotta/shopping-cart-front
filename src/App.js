@@ -4,11 +4,11 @@ import ResetCSS from "./assets/global/ResetCSS";
 import HomePage from "./pages/HomePage";
 
 const App = () => (
-  <>
-    <ResetCSS />
-    <GlobalStyle />
-    <HomePage />
-  </>
+    <>
+        <ResetCSS />
+        <GlobalStyle />
+        <HomePage />
+    </>
 );
 
 export default App;
