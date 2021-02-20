@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../../../../../config/color";
+import colors from "../../../../../../config/colors";
 import typography from "../../../../../../config/typography";
 
 export const Card = styled.li`
@@ -28,11 +28,4 @@ export const InfoBox = styled.div`
   p {
     color: ${colors.darkGray};
   }
-`;
-export const Button = styled.button`
-  height: 15%;
-  width: 100%;
-  background: ${colors.blackGray};
-  color: ${colors.white};
-  font-weight: bold;
 `;

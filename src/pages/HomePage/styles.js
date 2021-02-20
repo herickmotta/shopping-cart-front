@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../config/color";
+import colors from "../../config/colors";
 import typography from "../../config/typography";
 
 export const Page = styled.body`
