@@ -2,9 +2,16 @@ import styled from "styled-components";
 import colors from "../../config/color";
 import typography from "../../config/typography";
 
-const Page = styled.body`
+export const Page = styled.body`
   background: ${colors.white};
   font-family: ${typography.Roboto};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-export default Page;
+export const MainContent = styled.main`
+  display: flex;
+  width: 90%;
+  padding: 80px 0;
+`;
