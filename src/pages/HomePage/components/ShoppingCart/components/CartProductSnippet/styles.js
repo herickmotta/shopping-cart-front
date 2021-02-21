@@ -50,5 +50,7 @@ export const AddOrRemoveItem = styled.div`
     color: ${colors.midGray};
     border-left: 1px solid ${colors.midGray};
     height: 50%;
+    font-size: 20px;
+    color: ${colors.darkGray};
   }
 `;

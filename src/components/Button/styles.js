@@ -8,8 +8,9 @@ const Container = styled.button`
   background: ${colors.blackGray};
   font-family: ${typography.Roboto};
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   color: ${colors.white};
+  cursor: pointer;
 `;
 
 export default Container;
