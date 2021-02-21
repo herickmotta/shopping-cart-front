@@ -4,18 +4,23 @@ import colors from "../../../../config/colors";
 export const Container = styled.header`
   height: 80px;
   width: 100%;
+  padding: 40px 0;
   background: ${colors.lighterGray};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
   color: ${colors.blackGray};
   font-weight: bold;
+  display: flex;
+  justify-content: center;
   h1 {
     font-size: 2rem;
   }
 `;
-
+export const Content = styled.div`
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 export const UserBox = styled.div`
   display: flex;
   align-items: center;

@@ -10,6 +10,11 @@ const ProductsSection = () => (
     <ProductCard />
     <ProductCard />
     <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
   </Container>
 );
 
