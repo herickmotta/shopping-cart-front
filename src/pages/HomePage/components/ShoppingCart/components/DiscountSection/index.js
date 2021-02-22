@@ -23,7 +23,8 @@ export default function DiscountSection() {
     }
   }
 
-  function verifyVoucher() {
+  function verifyVoucher(e) {
+    e.preventDefault();
     const voucher = availableVouchers.find((v) => v.code === inputVoucher);
     setLoading(true);
     setDisabled(true);
@@ -50,21 +51,22 @@ export default function DiscountSection() {
 
   return (
     <Container>
-      <div>
+      <form onSubmit={verifyVoucher} data-testid="discount-form">
         <Input
+          data-testid="discount-input"
           placeholder="Discount code"
           value={inputVoucher}
           onChange={(e) => setInputVoucher(e.target.value)}
         />
         <ButtonBox>
           <Button
+            type="submit"
             text="APPLY"
-            onClick={verifyVoucher}
             loading={loading}
             disabled={disabled}
           />
         </ButtonBox>
-      </div>
+      </form>
       {message && <MessageBox text={message} isError={error} />}
     </Container>
   );

@@ -12,6 +12,7 @@ export default function Button({
 }) {
   return (
     <Container
+      data-testid="main-button"
       width={width}
       height={height}
       onClick={onClick}

@@ -81,19 +81,19 @@ function CalculateTotal() {
     <Container>
       <div>
         <span>Subtotal</span>
-        <span>{`$ ${subTotal}`}</span>
+        <span data-testid="sbt-field">{`$ ${subTotal}`}</span>
       </div>
       <div>
         <span>Shipping</span>
-        <span>{`$ ${shipping}`}</span>
+        <span data-testid="ship-field">{`$ ${shipping}`}</span>
       </div>
       <div>
         <span>Discount</span>
-        <span>{`$ ${discount}`}</span>
+        <span data-testid="disc-field">{`$ ${discount}`}</span>
       </div>
       <div className="total">
         <span>Total</span>
-        <span>{`$ ${total}`}</span>
+        <span data-testid="ttl-field">{`$ ${total}`}</span>
       </div>
     </Container>
   );

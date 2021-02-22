@@ -3,15 +3,9 @@ import Button from "../../../../components/Button";
 import MessageBox from "../../../../components/MessageBox";
 import { useCartContext } from "../../../../contexts/CartContext";
 import CalculateTotal from "./components/CalculateTotal";
-import CartProductSnippet from "./components/CartProductSnippet";
+import CartProducts from "./components/CartProducts";
 import DiscountSection from "./components/DiscountSection";
-import {
-  Container,
-  CartBox,
-  CartProducts,
-  ButtonBox,
-  EmptyCartBox,
-} from "./styles";
+import { Container, CartBox, ButtonBox } from "./styles";
 
 export default function ShoppingCart() {
   const { cart } = useCartContext();
@@ -42,18 +36,14 @@ export default function ShoppingCart() {
     <Container>
       <CartBox>
         <h1>Shopping Cart</h1>
-        <CartProducts>
-          {cart.length > 0 ? (
-            cart.map((item) => <CartProductSnippet item={item} />)
-          ) : (
-            <EmptyCartBox>Add items to your cart</EmptyCartBox>
-          )}
-          <DiscountSection />
-        </CartProducts>
+        <CartProducts />
+        <DiscountSection />
         <CalculateTotal />
       </CartBox>
+
       <ButtonBox>
         <Button
+          data-testid="checkout-btn"
           width="100%"
           height="100%"
           text={buttonText}

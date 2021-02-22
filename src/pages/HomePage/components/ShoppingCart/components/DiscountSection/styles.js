@@ -6,10 +6,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  & > div {
+  & > form {
     display: flex;
     margin-bottom: 20px;
   }
+  padding: 0 20px;
 `;
 export const Input = styled.input`
   background: ${colors.white};

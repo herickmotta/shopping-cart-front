@@ -8,18 +8,20 @@ import Container from "./styles";
 function ProductsSection() {
   const [products, setProducts] = useState([]);
   const [errorMessage, setErrorMessage] = useState(null);
-
-  useEffect(async () => {
+  async function getProducts() {
     const data = await ProductsService.getAll();
     if (data) {
       setProducts(data);
     } else {
       setErrorMessage("An error ocurred, please reload the page");
     }
+  }
+  useEffect(() => {
+    getProducts();
   }, []);
 
   return (
-    <Container>
+    <Container data-testid="products-container">
       {products.map((p) => (
         <ProductCard product={p} key={p.id} />
       ))}

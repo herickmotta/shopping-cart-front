@@ -1,5 +1,5 @@
 import React from "react";
-import { useCartContext } from "../../../../../../contexts/CartContext";
+import { useCartContext } from "../../../../../../../../contexts/CartContext";
 import { Box, ImageBox, InfoBox, AddOrRemoveItem } from "./styles";
 
 export default function CartProductSnippet({ item }) {
@@ -25,7 +25,7 @@ export default function CartProductSnippet({ item }) {
     setCart([...cart]);
   }
   return (
-    <Box>
+    <Box data-testid="cart-item">
       <ImageBox />
       <InfoBox>
         <h2>{name}</h2>
@@ -35,10 +35,10 @@ export default function CartProductSnippet({ item }) {
         </div>
       </InfoBox>
       <AddOrRemoveItem>
-        <button type="button" onClick={addQuantity}>
+        <button type="button" data-testid="add-btn" onClick={addQuantity}>
           +
         </button>
-        <button type="button" onClick={removeQuantity}>
+        <button type="button" data-testid="rmv-btn" onClick={removeQuantity}>
           -
         </button>
       </AddOrRemoveItem>

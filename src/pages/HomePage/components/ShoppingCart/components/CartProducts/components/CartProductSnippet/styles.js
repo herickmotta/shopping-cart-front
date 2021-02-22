@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import colors from "../../../../../../config/colors";
-import typography from "../../../../../../config/typography";
+import colors from "../../../../../../../../config/colors";
+import typography from "../../../../../../../../config/typography";
 
 export const Box = styled.div`
   height: 60px;

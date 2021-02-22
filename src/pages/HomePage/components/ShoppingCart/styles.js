@@ -22,10 +22,6 @@ export const CartBox = styled.div`
     padding: 15px 0;
   }
 `;
-export const CartProducts = styled.ul`
-  padding: 20px 20px 0 20px;
-  width: 100%;
-`;
 
 export const ButtonBox = styled.div`
   width: 100%;
@@ -37,11 +33,4 @@ export const ButtonBox = styled.div`
     font-size: 18px;
     margin-bottom: 10px;
   }
-`;
-
-export const EmptyCartBox = styled.div`
-  width: 100%;
-  height: 80px;
-  text-align: center;
-  padding: 20px;
 `;
