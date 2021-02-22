@@ -32,7 +32,8 @@
     "space-before-function-paren": "off",
     "react/jsx-filename-extension": "off",
     "react/prop-types": "off",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "class-methods-use-this": "off"
 
   }
 }
