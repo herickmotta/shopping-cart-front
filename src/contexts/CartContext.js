@@ -6,9 +6,13 @@ export default CartContext;
 
 export function CartProvider(props) {
   const [cart, setCart] = useState([]);
+  const [voucher, setVoucher] = useState(null);
 
   return (
-    <CartContext.Provider {...props} value={{ cart, setCart }}>
+    <CartContext.Provider
+      {...props}
+      value={{ cart, setCart, voucher, setVoucher }}
+    >
       {props.children}
     </CartContext.Provider>
   );
