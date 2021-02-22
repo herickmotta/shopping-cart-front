@@ -35,6 +35,7 @@ export const ButtonBox = styled.div`
   margin: 20px 0;
   button {
     font-size: 18px;
+    margin-bottom: 10px;
   }
 `;
 

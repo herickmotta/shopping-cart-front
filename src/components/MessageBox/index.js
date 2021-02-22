@@ -9,6 +9,7 @@ export default function MessageBox({ text, isError }) {
 
 const Box = styled.div`
   width: 100%;
+  text-align: center;
   color: ${(props) => (props.isError ? colors.red : colors.green)};
   font-family: ${typography.Roboto};
 `;
