@@ -4,6 +4,7 @@ import MessageBox from "../../../../../../components/MessageBox";
 import { useCartContext } from "../../../../../../contexts/CartContext";
 import VouchersService from "../../../../../../services/VouchersService";
 import { Input, Container, ButtonBox } from "./styles";
+import Reload from "../../../../../../components/Reload";
 
 export default function DiscountSection() {
   const { setVoucher } = useCartContext();
@@ -14,12 +15,14 @@ export default function DiscountSection() {
   const [loading, setLoading] = useState(false);
   const [disabled, setDisabled] = useState(false);
   async function getVouchersAvailable() {
+    setError(false);
+    setMessage(null);
     const data = await VouchersService.getAll();
     if (data) {
       setAvailableVouchers(data);
     } else {
       setError(true);
-      setMessage("Error getting vouchers, please reload the page");
+      setMessage("Error getting vouchers, please try again");
     }
   }
 
@@ -67,7 +70,12 @@ export default function DiscountSection() {
           />
         </ButtonBox>
       </form>
-      {message && <MessageBox text={message} isError={error} />}
+      {message && (
+        <div>
+          <MessageBox text={message} isError={error} />
+          <Reload onClick={getVouchersAvailable} />
+        </div>
+      )}
     </Container>
   );
 }
