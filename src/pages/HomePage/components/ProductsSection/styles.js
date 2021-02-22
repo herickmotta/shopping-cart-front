@@ -9,8 +9,13 @@ const Container = styled.ul`
   flex-shrink: 0;
 
   & > li {
-    margin-right: 30px;
-    margin-bottom: 30px;
+    margin: 0 15px 30px 15px;
+  }
+
+  @media (max-width: 750px) {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 `;
 

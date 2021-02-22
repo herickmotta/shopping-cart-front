@@ -16,5 +16,11 @@ export const MainContent = styled.main`
   flex-shrink: 0;
   width: 90%;
   justify-content: center;
+
   padding: 80px;
+
+  @media (max-width: 750px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
