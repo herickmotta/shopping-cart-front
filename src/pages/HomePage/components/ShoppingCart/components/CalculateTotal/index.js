@@ -56,7 +56,9 @@ function CalculateTotal() {
   }
 
   function getTotal() {
-    setTotal(subTotal + shipping - discount);
+    let totalSum = subTotal + shipping - discount;
+    if (totalSum < 0) totalSum = 0;
+    setTotal(totalSum);
   }
 
   useEffect(() => {
