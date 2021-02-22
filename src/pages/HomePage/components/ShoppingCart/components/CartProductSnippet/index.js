@@ -7,6 +7,7 @@ export default function CartProductSnippet({ item }) {
   const { name, price } = item.product;
 
   function addQuantity() {
+    if (item.product.available <= 0) return;
     item.quantity += 1;
     item.product.available -= 1;
     setCart([...cart]);
