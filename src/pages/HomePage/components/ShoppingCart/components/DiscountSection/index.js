@@ -11,7 +11,8 @@ export default function DiscountSection() {
   const [inputVoucher, setInputVoucher] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState(false);
-
+  const [loading, setLoading] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   async function getVouchersAvailable() {
     const data = await VouchersService.getAll();
     if (data) {
@@ -24,15 +25,23 @@ export default function DiscountSection() {
 
   function verifyVoucher() {
     const voucher = availableVouchers.find((v) => v.code === inputVoucher);
-    if (voucher) {
-      setError(false);
-      setVoucher(voucher);
-      setMessage("Voucher Applied!");
-    } else {
-      setError(true);
-      setVoucher(null);
-      setMessage("Invalid voucher");
-    }
+    setLoading(true);
+    setDisabled(true);
+    setTimeout(() => {
+      if (voucher) {
+        setError(false);
+        setVoucher(voucher);
+        setMessage("Voucher Applied!");
+        setLoading(false);
+        setDisabled(false);
+      } else {
+        setError(true);
+        setVoucher(null);
+        setMessage("Invalid voucher");
+        setLoading(false);
+        setDisabled(false);
+      }
+    }, 500);
   }
 
   useEffect(() => {
@@ -48,7 +57,12 @@ export default function DiscountSection() {
           onChange={(e) => setInputVoucher(e.target.value)}
         />
         <ButtonBox>
-          <Button text="APPLY" onClick={verifyVoucher} />
+          <Button
+            text="APPLY"
+            onClick={verifyVoucher}
+            loading={loading}
+            disabled={disabled}
+          />
         </ButtonBox>
       </div>
       {message && <MessageBox text={message} isError={error} />}

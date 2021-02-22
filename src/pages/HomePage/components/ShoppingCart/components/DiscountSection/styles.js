@@ -23,6 +23,8 @@ export const Input = styled.input`
 export const ButtonBox = styled.div`
   border-radius: 5px;
   overflow: hidden;
+  width: 100%;
+  height: 40px;
   & > button {
     padding: 10px;
   }
