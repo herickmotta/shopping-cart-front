@@ -44,7 +44,7 @@ function CalculateTotal() {
         setDiscount(subTotal * (voucher.amount / 100));
         break;
       case "fixed":
-        setDiscount(subTotal - voucher.amount);
+        setDiscount(voucher.amount);
         break;
       case "shipping":
         setFreeShippingValue(300.5);
