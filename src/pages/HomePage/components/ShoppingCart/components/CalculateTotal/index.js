@@ -65,7 +65,7 @@ function CalculateTotal() {
 
   useEffect(() => {
     getDiscount();
-  }, [voucher]);
+  }, [voucher, subTotal]);
 
   useEffect(() => {
     getShipping();

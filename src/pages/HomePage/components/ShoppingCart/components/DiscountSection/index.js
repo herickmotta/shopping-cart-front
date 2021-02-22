@@ -28,6 +28,10 @@ export default function DiscountSection() {
       setError(false);
       setVoucher(voucher);
       setMessage("Voucher Applied!");
+    } else {
+      setError(true);
+      setVoucher(null);
+      setMessage("Invalid voucher");
     }
   }
 
