@@ -25,7 +25,9 @@ function CalculateTotal() {
     } else if (totalWeight <= 10) {
       setShipping(30);
     } else {
-      setShipping((totalWeight - 10) * 5 + 30);
+      const aboveWeight = totalWeight - 10;
+      const shippingCost = Math.floor(aboveWeight / 5) * 7 + 30;
+      setShipping(shippingCost);
     }
   }
   useEffect(() => {
