@@ -3,8 +3,13 @@ import colors from "../../../../../../config/colors";
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  & > div {
+    display: flex;
+    margin-bottom: 20px;
+  }
 `;
 export const Input = styled.input`
   background: ${colors.white};
