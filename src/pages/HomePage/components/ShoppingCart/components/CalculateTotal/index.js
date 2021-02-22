@@ -71,7 +71,7 @@ function CalculateTotal() {
 
   useEffect(() => {
     getShipping();
-  }, [subTotal, discount]);
+  }, [subTotal, discount, voucher]);
 
   useEffect(() => {
     getTotal();
