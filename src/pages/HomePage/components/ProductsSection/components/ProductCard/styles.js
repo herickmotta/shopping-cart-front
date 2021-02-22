@@ -12,7 +12,7 @@ export const Card = styled.li`
 export const ImageBox = styled.div`
   height: 50%;
   width: 100%;
-  background: ${colors.midGray};
+  background: ${colors.green};
 `;
 export const InfoBox = styled.div`
   height: 35%;

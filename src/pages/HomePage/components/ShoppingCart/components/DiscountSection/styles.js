@@ -11,7 +11,7 @@ export const Input = styled.input`
   padding: 10px;
   border-radius: 5px;
   font-size: 14px;
-  border: 1px solid ${colors.midGray};
+  border: 1px solid ${colors.darkerGreen};
   margin-right: 20px;
 `;
 

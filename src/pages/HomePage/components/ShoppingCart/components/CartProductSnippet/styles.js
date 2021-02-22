@@ -4,7 +4,7 @@ import typography from "../../../../../../config/typography";
 
 export const Box = styled.div`
   height: 60px;
-  border: 1px solid ${colors.midGray};
+  border: 1px solid ${colors.darkerGreen};
   margin-bottom: 15px;
   font-family: ${typography.Roboto};
   display: flex;
@@ -15,7 +15,7 @@ export const Box = styled.div`
 export const ImageBox = styled.div`
   height: 100%;
   width: 20%;
-  background: ${colors.midGray};
+  background: ${colors.green};
 `;
 
 export const InfoBox = styled.div`
@@ -33,7 +33,7 @@ export const InfoBox = styled.div`
     display: flex;
     justify-content: space-between;
     p {
-      color: ${colors.darkGray};
+      color: ${colors.darkerGreen};
     }
   }
 `;
@@ -44,14 +44,14 @@ export const AddOrRemoveItem = styled.div`
   display: flex;
   flex-direction: column;
   & > :first-child {
-    border-bottom: 1px solid ${colors.midGray};
+    border-bottom: 1px solid ${colors.darkerGreen};
   }
   button {
-    color: ${colors.midGray};
-    border-left: 1px solid ${colors.midGray};
+    color: ${colors.brown};
+    border-left: 1px solid ${colors.darkerGreen};
     height: 50%;
     font-size: 20px;
-    color: ${colors.darkGray};
+    color: ${colors.darkerGreen};
     cursor: pointer;
   }
 `;

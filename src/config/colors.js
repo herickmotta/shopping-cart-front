@@ -5,6 +5,10 @@ const colors = {
   midGray: "#999999",
   darkGray: "#666666",
   blackGray: "#333333",
+  green: "#2fb67a",
+  darkerGreen: "#429c8b",
+  yellow: "#f3e29f",
+  waterGreen: "#b5dedc",
 };
 
 export default colors;

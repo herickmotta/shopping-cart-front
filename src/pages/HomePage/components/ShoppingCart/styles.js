@@ -11,12 +11,12 @@ export const CartBox = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  background: ${colors.lighterGray};
+  background: ${colors.waterGreen};
   h1 {
     font-size: 1.4rem;
     font-weight: bold;
-    background: ${colors.midGray};
-    color: ${colors.blackGray};
+    background: ${colors.green};
+    color: ${colors.white};
     width: 100%;
     text-align: center;
     padding: 15px 0;

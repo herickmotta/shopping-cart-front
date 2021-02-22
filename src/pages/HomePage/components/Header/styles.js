@@ -5,7 +5,7 @@ export const Container = styled.header`
   height: 80px;
   width: 100%;
   padding: 40px 0;
-  background: ${colors.lighterGray};
+  background: ${colors.waterGreen};
   color: ${colors.blackGray};
   font-weight: bold;
   display: flex;
@@ -32,5 +32,5 @@ export const Avatar = styled.div`
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background: ${colors.darkGray};
+  background: ${colors.darkerGreen};
 `;
