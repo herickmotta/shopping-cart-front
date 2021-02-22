@@ -27,5 +27,6 @@ export const InfoBox = styled.div`
   }
   p {
     color: ${colors.darkGray};
+    margin-bottom: 5px;
   }
 `;

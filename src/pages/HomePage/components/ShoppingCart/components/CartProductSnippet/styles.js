@@ -52,5 +52,6 @@ export const AddOrRemoveItem = styled.div`
     height: 50%;
     font-size: 20px;
     color: ${colors.darkGray};
+    cursor: pointer;
   }
 `;

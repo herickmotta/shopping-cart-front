@@ -1,20 +1,45 @@
 import React from "react";
+import { useCartContext } from "../../../../../../contexts/CartContext";
 import { Box, ImageBox, InfoBox, AddOrRemoveItem } from "./styles";
 
-export default function CartProductSnippet() {
+export default function CartProductSnippet({ item }) {
+  const { cart, setCart } = useCartContext();
+  const { name, price } = item.product;
+
+  function addQuantity() {
+    item.quantity += 1;
+    item.product.available -= 1;
+    setCart([...cart]);
+  }
+
+  function removeQuantity() {
+    item.quantity -= 1;
+    item.product.available += 1;
+    if (item.quantity <= 0) {
+      const itemIndex = cart.findIndex((i) => i.product.id === item.product.id);
+      if (itemIndex >= 0) {
+        cart.splice(itemIndex, 1);
+      }
+    }
+    setCart([...cart]);
+  }
   return (
     <Box>
       <ImageBox />
       <InfoBox>
-        <h2>Product Name</h2>
+        <h2>{name}</h2>
         <div>
-          <p>Quantity: 4</p>
-          <p>$ 123,45</p>
+          <p>{`Quantity: ${item.quantity} kg`}</p>
+          <p>{`$ ${price},00`}</p>
         </div>
       </InfoBox>
       <AddOrRemoveItem>
-        <button type="button">+</button>
-        <button type="button">-</button>
+        <button type="button" onClick={addQuantity}>
+          +
+        </button>
+        <button type="button" onClick={removeQuantity}>
+          -
+        </button>
       </AddOrRemoveItem>
     </Box>
   );

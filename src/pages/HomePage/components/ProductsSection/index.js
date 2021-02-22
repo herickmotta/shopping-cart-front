@@ -19,12 +19,7 @@ function ProductsSection() {
   return (
     <Container>
       {products.map((p) => (
-        <ProductCard
-          name={p.name}
-          price={p.price}
-          available={p.available}
-          key={p.id}
-        />
+        <ProductCard product={p} key={p.id} />
       ))}
     </Container>
   );

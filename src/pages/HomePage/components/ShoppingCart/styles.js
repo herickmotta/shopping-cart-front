@@ -7,7 +7,7 @@ export const Container = styled.div`
 export const CartBox = styled.div`
   overflow: hidden;
   width: 100%;
-  height: 510px;
+  min-height: 510px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -26,25 +26,6 @@ export const CartProducts = styled.ul`
   padding: 20px;
   width: 100%;
 `;
-export const CalculateTotal = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
-  width: 100%;
-  height: 100%;
-  & > div {
-    padding: 20px;
-    border-top: 1px solid ${colors.midGray};
-    display: flex;
-    justify-content: space-between;
-    color: ${colors.darkGray};
-  }
-  .total {
-    font-weight: bold;
-    color: ${colors.blackGray};
-  }
-`;
 
 export const ButtonBox = styled.div`
   width: 100%;
@@ -55,4 +36,9 @@ export const ButtonBox = styled.div`
   button {
     font-size: 18px;
   }
+`;
+
+export const EmptyCartBox = styled.div`
+  width: 100%;
+  height: 80px;
 `;

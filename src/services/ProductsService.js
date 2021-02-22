@@ -9,7 +9,7 @@ class ProductsService {
       }
       return null;
     } catch (err) {
-      return err;
+      return null;
     }
   }
 }

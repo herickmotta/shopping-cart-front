@@ -1,43 +1,32 @@
 import React from "react";
 import Button from "../../../../components/Button";
+import { useCartContext } from "../../../../contexts/CartContext";
+import CalculateTotal from "./components/CalculateTotal";
 import CartProductSnippet from "./components/CartProductSnippet";
 import DiscountSection from "./components/DiscountSection";
 import {
   Container,
   CartBox,
   CartProducts,
-  CalculateTotal,
   ButtonBox,
+  EmptyCartBox,
 } from "./styles";
 
 export default function ShoppingCart() {
+  const { cart } = useCartContext();
   return (
     <Container>
       <CartBox>
         <h1>Shopping Cart</h1>
         <CartProducts>
-          <CartProductSnippet />
-          <CartProductSnippet />
+          {cart.length > 0 ? (
+            cart.map((item) => <CartProductSnippet item={item} />)
+          ) : (
+            <EmptyCartBox>Add items to your cart</EmptyCartBox>
+          )}
           <DiscountSection />
         </CartProducts>
-        <CalculateTotal>
-          <div>
-            <span>Subtotal</span>
-            <span>$ 234,00</span>
-          </div>
-          <div>
-            <span>Shipping</span>
-            <span>$ 234,00</span>
-          </div>
-          <div>
-            <span>Discount</span>
-            <span>$ 234,00</span>
-          </div>
-          <div className="total">
-            <span>Total</span>
-            <span>$ 234,00</span>
-          </div>
-        </CalculateTotal>
+        <CalculateTotal />
       </CartBox>
       <ButtonBox>
         <Button width="100%" height="100%" text="CHECKOUT" />

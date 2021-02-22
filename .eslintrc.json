@@ -33,7 +33,10 @@
     "react/jsx-filename-extension": "off",
     "react/prop-types": "off",
     "no-unused-vars": "warn",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
+    "no-param-reassign": "off"
 
   }
 }
