@@ -37,7 +37,7 @@ export default function ProductCard({ product }) {
       <Button
         width="100%"
         height="15%"
-        text="BUY"
+        text={available > 0 ? "BUY" : "NO STOCK"}
         onClick={addProductToCart}
         loading={loading}
         disabled={disabled}
