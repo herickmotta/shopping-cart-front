@@ -47,7 +47,7 @@ function CalculateTotal() {
         setDiscount(voucher.amount);
         break;
       case "shipping":
-        setFreeShippingValue(300.5);
+        setFreeShippingValue(voucher.minValue);
         setDiscount(0);
         break;
       default:
