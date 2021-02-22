@@ -54,7 +54,10 @@ function CalculateTotal() {
         setDiscount(0);
     }
   }
-  useEffect(() => {}, []);
+
+  function getTotal() {
+    setTotal(subTotal + shipping - discount);
+  }
 
   useEffect(() => {
     getSubTotal();
@@ -67,6 +70,10 @@ function CalculateTotal() {
   useEffect(() => {
     getShipping();
   }, [subTotal, discount]);
+
+  useEffect(() => {
+    getTotal();
+  }, [subTotal, discount, shipping]);
 
   return (
     <Container>
