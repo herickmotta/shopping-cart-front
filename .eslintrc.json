@@ -36,7 +36,8 @@
     "class-methods-use-this": "off",
     "react/jsx-props-no-spreading": "off",
     "react/destructuring-assignment": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "no-undef": "off"
 
   }
 }

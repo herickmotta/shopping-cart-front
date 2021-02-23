@@ -12,4 +12,5 @@ const Box = styled.div`
   text-align: center;
   color: ${(props) => (props.isError ? colors.red : colors.green)};
   font-family: ${typography.Roboto};
+  margin-bottom: 20px;
 `;

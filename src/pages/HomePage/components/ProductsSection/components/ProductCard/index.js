@@ -31,10 +31,11 @@ export default function ProductCard({ product }) {
       <ImageBox />
       <InfoBox>
         <h2>{name}</h2>
-        <p>{`$ ${price},00/kg`}</p>
+        <p>{`$ ${price.toFixed(2).replace(/\./g, ",")}/kg`}</p>
         <p>{`${available} kg left`}</p>
       </InfoBox>
       <Button
+        id="buy-btn"
         width="100%"
         height="15%"
         text={available > 0 ? "BUY" : "NO STOCK"}

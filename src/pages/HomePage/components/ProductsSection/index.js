@@ -6,6 +6,7 @@ import ProductsService from "../../../../services/ProductsService";
 import ProductCard from "./components/ProductCard";
 import Container from "./styles";
 import Reload from "../../../../components/Reload";
+import colors from "../../../../config/colors";
 
 function ProductsSection() {
   const [products, setProducts] = useState([]);
@@ -19,6 +20,7 @@ function ProductsSection() {
       setLoading(false);
       setProducts(data);
     } else {
+      setLoading(false);
       setErrorMessage("An error ocurred, please try again");
     }
   }
@@ -29,7 +31,7 @@ function ProductsSection() {
   return (
     <Container data-testid="products-container">
       {loading ? (
-        <Spinner />
+        <Spinner color={colors.darkerGreen} fontSize="40px" />
       ) : (
         products.map((p) => <ProductCard product={p} key={p.id} />)
       )}

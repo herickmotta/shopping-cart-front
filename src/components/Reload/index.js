@@ -6,7 +6,7 @@ import colors from "../../config/colors";
 
 export default function Spinner({ color, onClick }) {
   const antIcon = (
-    <Box>
+    <Box data-testid="reload-box">
       <ReloadOutlined
         style={{
           fontSize: 30,
@@ -15,6 +15,7 @@ export default function Spinner({ color, onClick }) {
           padding: "5px",
           cursor: "pointer",
         }}
+        id="reload-btn"
         onClick={onClick}
       />
     </Box>

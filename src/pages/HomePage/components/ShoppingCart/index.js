@@ -33,7 +33,7 @@ export default function ShoppingCart() {
     setDisabled(false);
   }, [cart]);
   return (
-    <Container>
+    <Container data-testid="cart-section">
       <CartBox>
         <h1>Shopping Cart</h1>
         <CartProducts />
@@ -41,9 +41,8 @@ export default function ShoppingCart() {
         <CalculateTotal />
       </CartBox>
 
-      <ButtonBox>
+      <ButtonBox className="checkoutBtn">
         <Button
-          data-testid="checkout-btn"
           width="100%"
           height="100%"
           text={buttonText}

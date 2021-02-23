@@ -73,7 +73,7 @@ export default function DiscountSection() {
       {message && (
         <div>
           <MessageBox text={message} isError={error} />
-          <Reload onClick={getVouchersAvailable} />
+          {error && <Reload onClick={getVouchersAvailable} />}
         </div>
       )}
     </Container>

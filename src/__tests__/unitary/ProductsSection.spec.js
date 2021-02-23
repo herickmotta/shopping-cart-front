@@ -12,12 +12,12 @@ describe("Testing ProductsSection ", () => {
       {
         id: 1,
         name: "banana",
-        price: "30",
+        price: 30,
       },
       {
         id: 2,
         name: "apple",
-        price: "30",
+        price: 30,
       },
     ];
     const spy = jest.spyOn(ProductsService, "getAll");

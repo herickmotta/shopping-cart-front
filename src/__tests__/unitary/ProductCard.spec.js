@@ -9,7 +9,7 @@ describe("Testing ProductCard ", () => {
   it("should be able to receive and show props", () => {
     const product = {
       name: "banana",
-      price: "30",
+      price: 30,
       available: 1,
     };
     render(
@@ -30,7 +30,7 @@ describe("Testing ProductCard ", () => {
   it("should be able to buy product", async () => {
     const product = {
       name: "banana",
-      price: "30",
+      price: 30,
       available: 1,
     };
     render(
@@ -49,7 +49,7 @@ describe("Testing ProductCard ", () => {
   it("should'n be able to buy a non stock product", async () => {
     const product = {
       name: "banana",
-      price: "30",
+      price: 30,
       available: 0,
     };
     render(

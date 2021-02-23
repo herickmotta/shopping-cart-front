@@ -4,12 +4,14 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
+    "@testing-library/cypress": "^7.0.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.12.3",
     "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
+    "cypress": "^6.5.0",
     "dotenv": "^8.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -32,8 +34,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --watchAll=false --detectOpenHandles&& yarn cypress open",
+    "eject": "react-scripts eject",
+    "test e2e": "cypress open",
+    "test acceptance": "cypress open",
+    "test unit": "react-scripts test --detectOpenHandles"
   },
   "eslintConfig": {
     "extends": [

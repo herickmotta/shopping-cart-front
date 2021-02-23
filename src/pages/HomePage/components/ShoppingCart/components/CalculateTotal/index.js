@@ -71,7 +71,7 @@ function CalculateTotal() {
 
   useEffect(() => {
     getShipping();
-  }, [subTotal, discount, voucher]);
+  }, [subTotal, freeShippingValue]);
 
   useEffect(() => {
     getTotal();
@@ -81,19 +81,27 @@ function CalculateTotal() {
     <Container>
       <div>
         <span>Subtotal</span>
-        <span data-testid="sbt-field">{`$ ${subTotal}`}</span>
+        <span data-testid="sbt-field">{`$ ${subTotal
+          .toFixed(2)
+          .replace(/\./g, ",")}`}</span>
       </div>
       <div>
         <span>Shipping</span>
-        <span data-testid="ship-field">{`$ ${shipping}`}</span>
+        <span data-testid="ship-field">{`$ ${shipping
+          .toFixed(2)
+          .replace(/\./g, ",")}`}</span>
       </div>
       <div>
         <span>Discount</span>
-        <span data-testid="disc-field">{`$ ${discount}`}</span>
+        <span data-testid="disc-field">{`$ ${discount
+          .toFixed(2)
+          .replace(/\./g, ",")}`}</span>
       </div>
       <div className="total">
         <span>Total</span>
-        <span data-testid="ttl-field">{`$ ${total}`}</span>
+        <span data-testid="ttl-field">{`$ ${total
+          .toFixed(2)
+          .replace(/\./g, ",")}`}</span>
       </div>
     </Container>
   );
