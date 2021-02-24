@@ -16,7 +16,7 @@ DEMO-APP: https://shopping-cart-front.vercel.app/
 - Unit - Tests each components individually
 
 **NOTES**
-- Tests uses different libs because I started doing unitaries learning with react-testing-library. When I changed to acceptance ones, I begin to have some problemas, and that's why I used cypress.
+- Tests uses different libs because I started doing unitaries learning with react-testing-library. When I changed to acceptance ones, I begin to have some problems, and that's why I used cypress.
 
 API: https://shielded-wildwood-82973.herokuapp.com/
 
